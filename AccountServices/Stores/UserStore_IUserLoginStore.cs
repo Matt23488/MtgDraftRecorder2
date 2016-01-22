@@ -23,6 +23,8 @@ namespace AccountServices.Stores
                         LoginProvider = login.LoginProvider,
                         ProviderKey = login.ProviderKey
                     });
+
+                    context.SaveChanges();
                 }
                 scope.Complete();
             }

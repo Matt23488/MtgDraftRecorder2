@@ -98,10 +98,10 @@ namespace MtgDraftRecorder2
         {
         }
 
-        //public override Task<ClaimsIdentity> CreateUserIdentityAsync(AspNetUser user)
-        //{
-        //    return user.GenerateUserIdentityAsync((ApplicationUserManager)UserManager);
-        //}
+        public override Task<ClaimsIdentity> CreateUserIdentityAsync(AspNetUser user)
+        {
+            return user.GenerateUserIdentityAsync((ApplicationUserManager)UserManager);
+        }
 
         public static ApplicationSignInManager Create(IdentityFactoryOptions<ApplicationSignInManager> options, IOwinContext context)
         {
